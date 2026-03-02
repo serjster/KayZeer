@@ -24,7 +24,7 @@ Get the latest release from the [Releases page](https://github.com/serjster/KayZ
 3. Type the hint letters to click that element
 4. Press `Escape` to cancel, `Backspace` to correct
 
-![Activation](assets/activation.gif)
+[![Activation](assets/activation.gif)](https://github.com/user-attachments/assets/b85b8bef-beb5-4f2a-ae1d-f55f03e2ead3)
 
 ### Configuration
 
