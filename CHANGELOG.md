@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+- Fix and simplify point distribution.
+- Improve element detection.
+- Add minimum distance between points filter.
+
 ## 1.0.0
 
 Initial release.
