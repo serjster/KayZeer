@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.1
+- Fix manual points not being saved.
+
 ## 1.1.0
 
 ### Vim-like actions

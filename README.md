@@ -1,12 +1,8 @@
 # KayZeer
 
-Keyboard-driven screen navigation for macOS. Click anything without touching the mouse.
+Keyboard-driven screen navigation for macOS. Click anything (almost) without touching the mouse.
 
 KayZeer detects interactive UI elements on your screen and overlays hint labels on each one. Type the letters to click — like Vimium, but for your entire desktop.
-
-<!-- TODO: Add a demo GIF here
-![KayZeer Demo](assets/demo.gif)
--->
 
 ## Download
 
@@ -26,23 +22,44 @@ Get the latest release from the [Releases page](https://github.com/serjster/KayZ
 
 [![Activation](assets/activation.gif)](https://github.com/user-attachments/assets/b85b8bef-beb5-4f2a-ae1d-f55f03e2ead3)
 
+### Vim-like Actions
+
+KayZeer supports vim-inspired shortcuts during hint mode:
+
+- **Repeat last action** — press `.` during hints (or `⇧⌘.` anytime) to re-click the last target
+- **Command history** — press `,` during hints (or `⇧⌘,` anytime) to show recent targets as labelled hints without re-running detection
+- **Multiple click types** via modifier keys while typing a hint:
+  - `⇧` (Shift) — double-click
+  - `⌃` (Control) — right-click
+  - `⌥` (Option) — move cursor without clicking
+
+All modifier-to-action mappings are configurable.
+
 ### Configuration
 
 Click the menu bar icon and select **Configure...** to customize:
 
-| Setting             | Description                                                             | Default            |
-|---------------------|-------------------------------------------------------------------------|--------------------|
-| Activation shortcut | Key combo to trigger hints                                              | `Ctrl+Shift+Space` |
-| Character set       | Characters used for hint labels                                         | `asdfjkl;`         |
-| Distribution        | How labels are spatially assigned (Linear, Random, Hilbert, Grid, etc.) | Linear             |
-| Monitor Prefixes    | First character selects a monitor, rest select within it                | On                 |
-| Hint Style          | Shrink (hide typed chars) or Gray out (dim typed chars)                 | Shrink             |
+| Setting                | Description                                                             | Default            |
+|------------------------|-------------------------------------------------------------------------|--------------------|
+| Activation shortcut    | Key combo to trigger hints                                              | `Ctrl+Shift+Space` |
+| Character set          | Characters used for hint labels                                         | `asdfjkl;`         |
+| Distribution           | How labels are spatially assigned (Linear, Random, Hilbert, Grid, etc.) | Linear             |
+| Monitor Prefixes       | First character selects a monitor, rest select within it                | On                 |
+| Hint Style             | Shrink (hide typed chars) or Gray out (dim typed chars)                 | Shrink             |
+| Repeat Hotkey          | Shortcut to repeat last action                                          | `⇧⌘.`             |
+| History Hotkey         | Shortcut to open command history                                        | `⇧⌘,`             |
+| Action Modifiers       | Map modifier keys to click types (double, right, move)                  | ⇧/⌃/⌥             |
+| History incl. manual   | Include manual points in the history overlay                            | On                 |
 
 ![Configuration](assets/config.png)
 
 ### Manual Click Points
 
-You can add persistent click points via **Manage Points** in the configuration window. These are always available alongside auto-detected elements and use the last character in your character set as a prefix.
+Add persistent click points via **Manage Points** in the configuration window. These are always available alongside auto-detected elements and use the last character in your character set as a prefix.
+
+- **Drag** point markers to reposition them
+- **Delete** points with the ✕ button on each marker
+- Points are listed in the configuration window for easy management
 
 ## Requirements
 
