@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.1
+- Move search/status bar to middle of screen, it was being obscured by the macbook notch.
+
 ## 1.2.0
 
 ### OCR Text Detection
