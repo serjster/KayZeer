@@ -1,5 +1,52 @@
 # Changelog
 
+## 1.2.0
+
+### OCR Text Detection
+- New **Enhanced (with OCR)** detection pipeline that recognizes on-screen text alongside UI elements
+- OCR elements display their detected text directly on the overlay
+- Duplicate or prefix-ambiguous OCR texts are automatically numbered for disambiguation (e.g. "Save1", "Save2")
+
+> **Note:** OCR text detection is still experimental. It is slower than the legacy pipeline and I had to resort to running a service in the background for preprocessing, so battery life may be affected.
+
+### Unified Search
+- Type to filter both hint labels and OCR text simultaneously. If ocr hint labels conflict with non-ocr labels use **/** to toggle OCR-only mode (see below).
+- Fuzzy matching finds close OCR text matches as you type
+- Press **/** to toggle OCR-only mode — hides non-OCR labels and searches only text elements
+- Use **arrow keys** to cycle through OCR matches and **Enter** to select
+- Backspace always works — typing past all matches no longer dismisses the overlay
+- Exact hint label matches auto-execute immediately, even when OCR matches exist
+
+### Status Bar
+- Always-visible status bar at the top of the overlay
+- **OCR** badge — highlights when OCR-only mode is active (toggled with `/`)
+- **LEFT** / **DBL** (double-click) / **RIGHT** / **MOVE** badges — show the current click action
+- Modifier keys now **toggle** click actions instead of requiring hold:
+  - Control toggles single ↔ double click
+  - Option cycles left click → right click → move cursor
+- Search query and match count displayed inline when filtering
+
+### Mouse Mode
+- New **Mouse Mode** (`⇧⌘;`) — full keyboard-driven mouse control
+- **h/j/k/l** — move cursor (vim-style), hold **Shift** for fast movement
+- **u** — left click (press twice quickly for double-click, hold + move to drag/select)
+- **i** — middle click
+- **o** — right click (hold + move to drag)
+- **y/n** — scroll up/down
+- **Esc** — exit mouse mode
+- Hotkey is configurable in the Shortcuts section
+
+### Detection Pipelines
+- Renamed pipelines: **Basic** (fast, no OCR) and **Enhanced (with OCR)**
+- Background OCR is skipped entirely when using the Basic pipeline for improved performance
+- OCR display options: "Hint labels" (blue-colored labels) or "Show detected text" (overlay text on elements)
+
+### Configuration
+- Reset to Defaults button added to the Detection section
+- Default OCR display mode is now "Show detected text"
+- Debug sliders for all Enhanced pipeline parameters (blur, canny, tiling, merge, filter)
+- Action modifiers simplified: Control toggles single/double click, Option cycles left/right/move
+
 ## 1.1.1
 - Fix manual points not being saved.
 
