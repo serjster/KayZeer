@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.2
+
+### Hint Labels
+- New **Overlap Handling** setting — choose between truncating overlapping labels or leaving them as-is
+- Truncate mode shows shortened labels (2 chars + peek) when hints overlap, making dense areas more readable
+- Fixed duplicate hint labels appearing across different screens
+
+### Other
+- Default detection pipeline changed to Basic for faster out-of-box performance
+
 ## 1.2.1
 - Move search/status bar to middle of screen, it was being obscured by the macbook notch.
 
