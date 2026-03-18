@@ -91,7 +91,7 @@ Click the menu bar icon and select **Configure...** to customize:
 | Detection Pipeline   | Basic (fast, no OCR) or Enhanced (with OCR text detection)              | Enhanced (with OCR) |
 | OCR elements         | How OCR elements are displayed: Hint labels or Show detected text       | Show detected text  |
 
-![Configuration](assets/config.png)
+![Configuration](./assets/config.png)
 
 ### Manual Click Points
 
