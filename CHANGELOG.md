@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.3
+
+### Status Bar
+- Modifier key hints now displayed above status bar badges for quick reference
+
+### Stability
+- Fixed stream recovery when waking from sleep on external monitors
+- Fixed streaming lifecycle issues when toggling disable, waking from sleep, or changing displays
+
 ## 1.2.2
 
 ### Hint Labels
