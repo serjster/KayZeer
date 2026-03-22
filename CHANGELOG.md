@@ -2,10 +2,21 @@
 
 ## 1.2.3
 
-### Status Bar
+### Linux (Wayland) — Initial Release
+- Full port of KayZeer to Linux with Wayland-first architecture
+- Screen capture via wlr-screencopy (Sway, Hyprland) and PipeWire portal (KDE, GNOME)
+- GPU-accelerated detection pipeline (wgpu compute shaders)
+- Layer-shell overlay with hint badges, status bar, and mouse mode
+- Keyboard grab via evdev with modifier-safe grab/ungrab lifecycle
+- System tray via StatusNotifierItem (D-Bus/ksni)
+- Configuration persisted to ~/.config/kayzeer/config.toml
+- Hotkey recorder UI with live reload to evdev monitor
+- All macOS features ported except OCR text detection
+
+### macOS
 - Modifier key hints now displayed above status bar badges for quick reference
 
-### Stability
+### Stability (macOS)
 - Fixed stream recovery when waking from sleep on external monitors
 - Fixed streaming lifecycle issues when toggling disable, waking from sleep, or changing displays
 
