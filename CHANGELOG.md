@@ -12,6 +12,10 @@
 - Configuration persisted to ~/.config/kayzeer/config.toml
 - Hotkey recorder UI with live reload to evdev monitor
 - All macOS features ported except OCR text detection
+- Manual click points with interactive overlay — click to add, drag to move, delete (matching macOS UX)
+- Portal restore token persisted to skip the KDE "share your screen" dialog on restart
+- Detection pipeline aligned with macOS basic pipeline for cross-platform parity
+- Available as an AUR package (`kayzeer-bin`) with systemd user service and keyd integration
 
 ### macOS
 - Modifier key hints now displayed above status bar badges for quick reference

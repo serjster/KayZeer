@@ -18,13 +18,22 @@ Get the latest release from the [Releases page](https://github.com/serjster/KayZ
 
 > **Note:** Only tested on Arch Linux with KDE Plasma 6. Other distributions and compositors may work but are not officially supported.
 
+#### Arch Linux (AUR)
+```bash
+yay -S kayzeer-bin
+systemctl --user enable --now kayzeer.service
+```
+
+The AUR package installs the binary, a systemd user service, and a udev rule. If you use [keyd](https://github.com/rvaiya/keyd), the service automatically stops it while KayZeer is running and restarts it on exit.
+
+#### Manual install
 1. Download the `.tar.gz` file
 2. Extract: `tar xzf KayZeer-*-linux-x86_64.tar.gz`
 3. Add your user to the `input` group: `sudo usermod -aG input $USER` (log out and back in)
 4. Run: `./kayzeer` — it appears in your system tray
-5. On first launch, a screen sharing dialog appears — **select "Entire Workspace"** (not individual displays). This is required for KayZeer to see all monitors as a single capture.
+5. On first launch, a screen sharing dialog appears — **select "Entire Workspace"** (not individual displays). Subsequent launches skip the dialog automatically.
 
-**Install runtime dependencies (Arch):**
+**Runtime dependencies (Arch):**
 ```bash
 sudo pacman -S --needed gstreamer gst-plugins-base-libs mesa dbus
 ```
@@ -45,7 +54,7 @@ These are typically already installed on a KDE desktop.
 | Mouse mode (hjkl + clicks + scroll) | Yes | Yes |
 | Repeat last action | Yes | Yes |
 | Click history | Yes | Yes |
-| Manual click points | Yes (UI + persistence) | Persistence only |
+| Manual click points | Yes | Yes |
 | Configurable shortcuts | Yes | Yes |
 | Configuration persistence | Yes | Yes |
 
